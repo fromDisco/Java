@@ -1,5 +1,8 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class StringClass {
     public static void main(String[] args) {
@@ -25,6 +28,24 @@ public class StringClass {
         equals();
 
         compareTo();
+
+        // .join()
+        join();
+
+        // .toUpperCase(), .toLowerCase()
+        toUpperLowerCase();
+
+        // .replace()
+        replace();
+
+        // .split()
+        splitString();
+
+        // .matches()
+        matches();
+
+        // .getFileEnding
+        getFileEnding();
     }
 
     private static void isEmpty() {
@@ -95,6 +116,59 @@ public class StringClass {
         System.out.println("\"abc\".compareTo(\"abc\"): " + "abc".compareTo("abc")); // --> equal = 0
         System.out.println("\"abc\".compareTo(\"cde\"): " + "abc".compareTo("cde")); // --> first < second = -x
         System.out.println("\"cde\".compareTo(\"abc\"): " + "cde".compareTo("abc")); // --> first > second = x
+    }
+
+    private static void join() {
+        System.out.printf("%n# String.join():%n");
+        String[] letters = {"T", "i", "r", "e", "d"};
+        String word = String.join("", letters);
+        System.out.printf("String.join(\"\", [\"T\", \"i\", \"r\", \"e\", \"d\"]) --> %s%n",  word);
+    }
+
+    private static void toUpperLowerCase() {
+        System.out.printf("%n# .toUpperCase(), toLowerCase():%n");
+        System.out.println("abc" + " -> " + "abc".toUpperCase());
+        System.out.println("ABC" + " -> " + "ABC".toLowerCase());
+        // ß gets converted to SS
+        System.out.println("ß" + " -> " + "ß".toUpperCase(Locale.ROOT));
+    }
+
+    private static void replace() {
+        System.out.printf("%n# .replace():%n");
+        System.out.println("Replace 'e' in \"Hello\" -> " + "Hello".replace('e', 'a'));
+        System.out.println("Remove \" World\" from \"Hello World\" -> " + "Hello World".replace(" World", ""));
+    }
+
+    private static void splitString() {
+        System.out.printf("%n# .split():%n");
+        String[] split = "Today0i1will2work3on4my5first6project7with8Patrick9and0Maximilian.".split("\\d");
+        System.out.println("Today0i1will2work3on4my5first6project7with8Patrick9and0Maximilian.");
+        System.out.println(Arrays.toString(split));
+        System.out.println(String.join(" ", split));
+    }
+
+    private static void matches() {
+        System.out.printf("%n# .matches():%n");
+        System.out.println("\"1234\".matches(\"\\d+\") --> " + "1234".matches("\\d+"));
+        System.out.println("\"1b34\".matches(\"\\d+\") --> " + "1b34".matches("\\d+"));
+        System.out.println("\"1234 \".matches(\"\\d+\") --> " + "1234 ".matches("\\d+"));
+    }
+
+    private static void getFileEnding() {
+        String fileName = "neo.vim.tXt   ";
+        String[] fileArray = fileName.trim().split("\\.");
+
+        // has to be type casted, because return value is of type Object
+        String fileEnding = (String)Array.get(fileArray, 1);
+        // only matches, if there is no dot in the filename
+        if (fileEnding.toLowerCase().equals("txt")) {
+            System.out.println("We have a match.");
+        }
+
+        // matches even if there are dots in the filename
+        int lastIndexOf = fileName.lastIndexOf(".");
+        String name = fileName.substring(0, lastIndexOf);
+        System.out.println(name);
 
     }
 }
