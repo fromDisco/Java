@@ -1,12 +1,12 @@
 package Enumarations;
 
 public class Enumerations {
-    public static final String STAR = "\u2735";
-    public static final String FOUR_RHOMBS = "\u2756";
+    // public static final String STAR = "\u2735";
+    // public static final String FOUR_RHOMBS = "\u2755";
     private Identifier identifierSymbol;
 
-    public Identifier getIdentifierSymbol() {
-        return this.identifierSymbol;
+    public String getIdentifierSymbol() {
+        return this.identifierSymbol.getSIGN();
     }
 
     public void setIdentifierSymbol(Identifier identifier) {
@@ -16,12 +16,13 @@ public class Enumerations {
     }
 
     /**
-     * setIdentifierSymbol takes String name and changes camelCase to UPPER_CASE
-     * result is a constant class attribute, then gets that field, reads the value
-     * and declares this value as the identifierSymbol
-     * @param String name: name of constant name
-     * @throws NoSuchFieldException
+     etIdentifierSymbol takes String name and changes camelCase to UPPER_CASE
+     result is a constant class attribute, then gets that field, reads the value
+     nd declares this value as the identifierSymbol
+     param String name: name of constant name
+     throws NoSuchFieldException
      * @throws IllegalAccessException
+     * @throws NoSuchFieldException
      */
     public void setIdentifierSymbolReflectionTest(String name) throws NoSuchFieldException, IllegalAccessException {
         String addUnderScores = name.replaceAll("([A-Z])", "_$1");
