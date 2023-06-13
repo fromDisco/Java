@@ -4,7 +4,12 @@ public class Client {
     public static void main(String[] args) {
         Enumerations enumerations = new Enumerations();
         enumerations.setIdentifierSymbol(Identifier.STAR);
+        enumerations.setIdentifierSymbol(null);
+
+        // Call got getter
         System.out.println(enumerations.getIdentifierSymbol());
+        // Call to toString()
+        System.out.println(enumerations);
 
         // ####################################################
         // TEST REFLECTION

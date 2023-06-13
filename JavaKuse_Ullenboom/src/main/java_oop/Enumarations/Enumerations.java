@@ -9,12 +9,17 @@ public class Enumerations {
         return this.identifierSymbol.getSIGN();
     }
 
+    /**
+     * @param identifier is Instance of Identifier {@link Identifier}
+     */
     public void setIdentifierSymbol(Identifier identifier) {
         if (identifier != null) {
             this.identifierSymbol = identifier;
         }
     }
 
+    // ####################################################
+    // Test Reflections
     /**
      etIdentifierSymbol takes String name and changes camelCase to UPPER_CASE
      result is a constant class attribute, then gets that field, reads the value
@@ -37,5 +42,12 @@ public class Enumerations {
 
     public Identifier getIdentifier_symbol() {
         return identifierSymbol;
+    }
+    // ####################################################
+
+    public String toString() {
+        return "Enumerations{" +
+                "identifierSymbol = " + identifierSymbol.getSIGN() +
+                "}";
     }
 }
