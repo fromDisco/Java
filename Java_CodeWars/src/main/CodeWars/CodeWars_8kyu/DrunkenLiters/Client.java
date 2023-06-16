@@ -1,4 +1,4 @@
-package DrunkenLiters;
+package CodeWars_8kyu.DrunkenLiters;
 
 public class Client {
     public static void main(String[] args) {

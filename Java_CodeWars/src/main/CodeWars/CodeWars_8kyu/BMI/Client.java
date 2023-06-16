@@ -1,4 +1,4 @@
-package BMI;
+package CodeWars_8kyu.BMI;
 
 public class Client {
     public static void main(String[] args) {

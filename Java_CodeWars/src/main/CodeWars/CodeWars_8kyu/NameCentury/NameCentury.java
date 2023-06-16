@@ -1,4 +1,4 @@
-package NameCentury;
+package CodeWars_8kyu.NameCentury;
 
 /**
  * The first century spans from the year 1 up to and including the year 100,

@@ -1,4 +1,4 @@
-package NameCentury;
+package CodeWars_8kyu.NameCentury;
 
 public class Client {
     public static void main(String[] args) {

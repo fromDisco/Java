@@ -1,4 +1,4 @@
-package NeedleInHaystack;
+package CodeWars_8kyu.NeedleInHaystack;
 
 import java.util.Arrays;
 

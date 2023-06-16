@@ -1,4 +1,4 @@
-package EvenOrOdd;
+package CodeWars_8kyu.EvenOrOdd;
 
 public class Client {
     public static void main(String[] args) {

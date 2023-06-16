@@ -1,4 +1,4 @@
-package DrunkenLiters;
+package CodeWars_8kyu.DrunkenLiters;
 
 /**
  * Nathan loves cycling.

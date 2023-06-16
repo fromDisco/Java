@@ -1,4 +1,4 @@
-package BMI;
+package CodeWars_8kyu.BMI;
 
 /**
  * Write function bmi that calculates body mass index (bmi = weight / height*height).

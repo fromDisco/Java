@@ -1,4 +1,4 @@
-package IsInArray;
+package CodeWars_8kyu.IsInArray;
 
 public class Client {
     public static void main(String[] args) {

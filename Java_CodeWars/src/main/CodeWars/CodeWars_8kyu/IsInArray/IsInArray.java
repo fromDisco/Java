@@ -1,4 +1,4 @@
-package IsInArray;
+package CodeWars_8kyu.IsInArray;
 
 import java.util.Arrays;
 

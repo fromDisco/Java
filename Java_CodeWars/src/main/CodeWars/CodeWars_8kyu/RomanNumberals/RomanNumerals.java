@@ -1,4 +1,4 @@
-package RomanNumberals;
+package CodeWars_8kyu.RomanNumberals;
 
 public class RomanNumerals {
     /**
