@@ -15,7 +15,6 @@ public class CatchExceptions {
     public static void main(String[] args) {
         // get path of current file
         CatchExceptions example = new CatchExceptions();
-        example.getFilePath();
 
         // get user directory and compose path manually
         String userDir = System.getProperty("user.dir");
@@ -24,10 +23,12 @@ public class CatchExceptions {
         String absolutePath = userDir + File.separator + fileName;
         Path filePath = Paths.get(absolutePath);
 
+        // prepare list, that is written to file
         List<String> list = new ArrayList<>();
         list.add("Hallöchen.");
 
         try {
+            // write list int filePath
             Files.write(filePath, list);
             System.out.println();
         } catch (IOException ioe) {
