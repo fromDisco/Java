@@ -1,0 +1,2 @@
+copy: This is a beginning.
+copy: This is a end.
