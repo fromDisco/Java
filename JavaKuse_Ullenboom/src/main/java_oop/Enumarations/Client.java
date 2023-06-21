@@ -6,7 +6,7 @@ public class Client {
         enumerations.setIdentifierSymbol(Identifier.STAR);
         enumerations.setIdentifierSymbol(null);
 
-        // Call got getter
+        // Call to getter
         System.out.println(enumerations.getIdentifierSymbol());
         // Call to toString()
         System.out.println(enumerations);
