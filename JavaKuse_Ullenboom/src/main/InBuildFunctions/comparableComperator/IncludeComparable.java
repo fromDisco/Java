@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class IncludeComparable implements Comparable<IncludeComparable> {
     int number;
-    int number2"A";
+    int number2;
 
     // Constructors
     IncludeComparable(int number, int number2) {

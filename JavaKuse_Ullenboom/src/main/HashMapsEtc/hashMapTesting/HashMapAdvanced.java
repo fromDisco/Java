@@ -14,6 +14,8 @@ public class HashMapAdvanced {
         Map<Product, String> myMap = new HashMap<>();
 
         // hashMap.put(key, val) returns old value
+        // when writing new value
+        // new value in -> old value out (as return value)
         String initialVal = myMap.put(key, "val");
         System.out.println("# initialVal returned from .put(key, val) -> " + initialVal);
         System.out.println("object=key -> " + myMap + "\n");

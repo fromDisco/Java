@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- load data file -->
+	<context:property-placeholder location="classpath:data.properties"/>
+
+
+    <!-- spring01 -->
+    <bean id="cyclingCoach" class="com.springFramework.spring01.CyclingCoach"></bean>
+    <bean id="trackCoach" class="com.springFramework.spring01.TrackCoach"></bean>
+    
+    <!-- dependencyIncection / FortuneTeller -->
+    <bean id="myHappyFortune" class="spring.chap05_dependencyInjection.HappyFortune"></bean>
+    <bean id="happyFortuneTeller" 
+    	  class="spring.chap05_dependencyInjection.FortuneTeller">
+    	  <!-- inject into the constructor of FortuneTeller -->
+    	  <constructor-arg ref="myHappyFortune" />
+    </bean>
+
+    <bean id="myBadFortune" class="spring.chap05_dependencyInjection.BadFortune"></bean>
+    <bean id="badFortuneTeller" 
+    	  class="spring.chap05_dependencyInjection.FortuneTeller">
+    	  <!-- inject into the constructor of FortuneTeller -->
+    	  <constructor-arg ref="myBadFortune" />
+    </bean>
+    
+    <bean id="myCartomancer" 
+    	  class="spring.chap05_dependencyInjection.Cartomancer">
+		  <!-- pass reference myHappyFortune to setter of fortuneService -->
+    	  <property name="fortuneService" ref="myHappyFortune" />
+		  <!-- pass literal values from data.properties file to setters -->
+    	  <property name="email" value="${person01.email}"/>
+    	  <property name="number" value="${person01.number}" />
+    </bean>
+</beans>
+
+
+
+
+

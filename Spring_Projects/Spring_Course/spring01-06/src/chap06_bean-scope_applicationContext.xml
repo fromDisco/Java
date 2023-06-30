@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath:chap06_scopesAndLifeCycles.properties"/>
+
+    <!-- dependencyIncection / FortuneTeller -->
+    <bean id="racebike01" 
+    	  class="spring.chap06_scopesAndLifecycles.RaceBike">
+    	  <!-- inject into the constructor of FortuneTeller -->
+    	  <property name="type" value="${racebike01.type}"/>
+    	  <property name="brand" value="${racebike01.brand}"/>
+    </bean>
+
+    <bean id="racebike02" 
+    	  class="spring.chap06_scopesAndLifecycles.RaceBike"
+    	  scope="prototype">
+    	  <!-- inject into the constructor of FortuneTeller -->
+    	  <property name="type" value="${racebike01.type}"/>
+    	  <property name="brand" value="${racebike01.brand}"/>
+    </bean>
+    
+    <bean id="racebike03" 
+    	  class="spring.chap06_scopesAndLifecycles.RaceBike"
+    	  init-method="startUp"
+    	  destroy-method="destroy"
+    	  scope="prototype">
+    	  <!-- inject into the constructor of FortuneTeller -->
+    	  <property name="type" value="${racebike01.type}"/>
+    	  <property name="brand" value="${racebike01.brand}"/>
+    </bean>
+    
+</beans>
+
+
+
+
+
