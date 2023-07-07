@@ -39,12 +39,9 @@ public class SumGroupedBy {
     // 1st parameter is the stocklist (L in example),
     // 2nd parameter is list of categories (M in example)
     public static String stockSummary(String[] lstOfArt, String[] categories) {
-        Map<String, Integer> map = list.stream()
-                .collect(Collectors.toMap());
         if (lstOfArt.length == 0 || categories.length == 0) {
             return "[]";
         }
-        System.out.println(categories.getClass());
         // get first letters == category
         HashMap<String, Integer> rawHashMap = getHashMap(categories);
         // map amount to category
