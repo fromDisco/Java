@@ -1,6 +1,4 @@
-package CodeWars_6Kyu.TenMinuteWalk;
-
-import java.util.Arrays;
+package CodeWars_6Kyu.tenMinuteWalk;
 
 /**
  * You live in the city of Cartesia where all roads are laid out in a perfect grid.

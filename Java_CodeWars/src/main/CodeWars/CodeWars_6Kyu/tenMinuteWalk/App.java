@@ -1,4 +1,4 @@
-package CodeWars_6Kyu.TenMinuteWalk;
+package CodeWars_6Kyu.tenMinuteWalk;
 
 public class App {
     public static void main(String[] args) {

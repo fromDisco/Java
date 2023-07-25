@@ -1,6 +1,5 @@
-package CodeWars_6Kyu.RomanNumberals;
+package CodeWars_6Kyu.romanNumberals;
 
-import java.sql.Array;
 import java.util.*;
 
 /**

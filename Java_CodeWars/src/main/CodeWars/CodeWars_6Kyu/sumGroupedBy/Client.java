@@ -1,4 +1,4 @@
-package CodeWars_6Kyu.SumGroupedBy;
+package CodeWars_6Kyu.sumGroupedBy;
 
 public class Client {
     public static void main(String[] args) {

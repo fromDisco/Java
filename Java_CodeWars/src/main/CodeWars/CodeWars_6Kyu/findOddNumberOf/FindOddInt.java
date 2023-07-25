@@ -1,7 +1,6 @@
-package CodeWars_6Kyu.FindOddNumberOf;
+package CodeWars_6Kyu.findOddNumberOf;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Given an array of integers, find the one that appears an odd number of times.

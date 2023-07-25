@@ -1,4 +1,4 @@
-package CodeWars_6Kyu.RomanNumberals;
+package CodeWars_6Kyu.romanNumberals;
 
 public class Client {
     public static void main(String[] args) {

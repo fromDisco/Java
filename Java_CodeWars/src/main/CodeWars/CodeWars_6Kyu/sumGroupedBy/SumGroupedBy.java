@@ -1,7 +1,6 @@
-package CodeWars_6Kyu.SumGroupedBy;
+package CodeWars_6Kyu.sumGroupedBy;
 import static java.util.stream.Collectors.joining;
 import java.util.HashMap;
-import java.util.stream.Collectors;
 
 /**
  * A bookseller has lots of books classified in 26 categories labeled A, B, ... Z.

@@ -1,4 +1,4 @@
-package CodeWars_6Kyu.FindOddNumberOf;
+package CodeWars_6Kyu.findOddNumberOf;
 
 public class App {
     public static void main(String[] args) {
