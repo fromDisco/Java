@@ -20,6 +20,7 @@ import java.util.stream.Stream;
 
 /**
  * Reads files of specific Folder and parses the CSV-files
+ * by default files in src/main/rescources/upload are read
  */
 public class CSVParser
 {
@@ -27,8 +28,8 @@ public class CSVParser
 
     /**
      * Takes a list of files, that are checked if they are CSV-Files.
-     *
-     * @return List of Lists, that contain HashMaps of each line in the CSV-file
+     * then creates a Map of every Line in the file.
+     * @return List of Lists, that contain the HashMaps
      */
     public static @NotNull List<List> parser() {
         String DELIMETER = ",";
