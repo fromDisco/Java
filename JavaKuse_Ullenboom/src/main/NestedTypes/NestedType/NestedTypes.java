@@ -14,8 +14,6 @@ public class NestedTypes {
      * the reference to the parent object will also excist.
      * --> this can block memory
      */
-    class Contains {
-        public boolean containsString(String string) {
             // nested class can access attributes and methods of parent class
             // Access 'this' of parent class
             return NestedTypes.this.string.contains(string);

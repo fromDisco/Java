@@ -1,3 +1,0 @@
-first,second,third,four
-one,two,three,four
-spring,summer,autumn,winter
